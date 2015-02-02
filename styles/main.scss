@@ -1,0 +1,120 @@
+@import 'fonts';
+@import 'spinner';
+@import '../bower_components/foundation/scss/foundation/_functions.scss';
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
+
+$topbar-height: rem-calc(45);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.new-story {
+  margin-top: 20px;
+}
+
+.new-story__title {
+  input {
+   border: none;
+   box-shadow: none;
+   border-bottom: 2px solid #ccc;
+  }
+}
+
+.new-story__body {
+  textarea {
+   background-color: #fafafa;
+   border: none;
+   box-shadow: none;
+  }
+}
+.new-story__submit {
+
+}
+
+.story {
+  list-style: none;
+  padding: 10px;
+  margin-top: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.story__title {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: rem-calc(24);
+  a {
+    color: black;
+  }
+}
+
+.story__body {
+  font-weight: 400;
+  font-size: rem-calc(14);
+  color: #333;
+  font-style: italic;
+}
+
+.story__user {
+  font-weight: 400;
+  font-size: rem-calc(12);
+  color: #2E8BA9;
+}
+
+.story__date {
+  color: #aaa;
+  font-size: rem-calc(12);
+}
+
+.card {
+  margin-bottom: 1em;
+  padding: 20px;
+  background-color: #ECF0F1;
+  border-bottom: 4px solid #D4D7D8;
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.card--login {
+  margin-top: 20px;
+}
+
+.card--login__field {
+  label {
+    font-family: lato-light;
+  }
+  input {
+    border-width: 0px;
+    border-left: 4px solid #c2c2c2;
+    box-shadow: none;
+  }
+}
+
+.card--login__submit {
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+  font-family: 'Lato'
+}
+
+.error-notice {
+  position: absolute;
+  top: $topbar-height; 
+  width: 100%;
+  z-index: 9999;
+  background-color: #E44646;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+}
+
