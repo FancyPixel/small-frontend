@@ -25,6 +25,7 @@ var SignupPage = React.createClass({
     e.preventDefault();
     this.setState({ errors: [] });
     var email = this.refs.email.getDOMNode().value;
+    var username = this.refs.username.getDOMNode().value;
     var password = this.refs.password.getDOMNode().value;
     var passwordConfirmation = this.refs.passwordConfirmation.getDOMNode().value;
     if (password !== passwordConfirmation) {
@@ -45,6 +46,10 @@ var SignupPage = React.createClass({
               <div className="card--login__field">
                 <label name="email">Email</label>
                 <input type="text" name="email" ref="email" /> 
+              </div>
+              <div className="card--login__field">
+                <label name="username">Username</label>
+                <input type="text" name="username" ref="username" /> 
               </div>
               <div className="card--login__field">
                 <label name="password">Password</label>

@@ -18,10 +18,11 @@ var APIEndpoints = SmallConstants.APIEndpoints;
 
 module.exports = {
 
-  signup: function(email, password, passwordConfirmation) {
+  signup: function(email, username, password, passwordConfirmation) {
     request.post(APIEndpoints.REGISTRATION)
       .send({ user: { 
         email: email, 
+        username: username,
         password: password,
         password_confirmation: passwordConfirmation
       }})
