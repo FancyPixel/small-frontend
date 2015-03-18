@@ -8,8 +8,8 @@ var CHANGE_EVENT = 'change';
 
 // Load an access token from the session storage, you might want to implement
 // a 'remember me' using localSgorage
-var _accessToken = sessionStorage.getItem('accessToken')
-var _email = sessionStorage.getItem('email')
+var _accessToken = sessionStorage.getItem('accessToken');
+var _email = sessionStorage.getItem('email');
 var _errors = [];
 
 var SessionStore = assign({}, EventEmitter.prototype, {
