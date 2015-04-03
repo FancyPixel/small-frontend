@@ -31,7 +31,7 @@ var SignupPage = React.createClass({
     if (password !== passwordConfirmation) {
       this.setState({ errors: ['Password and password confirmation should match']});
     } else {
-      SessionActionCreators.signup(email, password, passwordConfirmation);
+      SessionActionCreators.signup(email, username, password, passwordConfirmation);
     }
   },
 
