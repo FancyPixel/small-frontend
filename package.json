@@ -1,9 +1,9 @@
 {
-  "name": "carrot-frontend",
+  "name": "small-frontend",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andreamazz/small-frontend.git"
+    "url": "https://github.com/FancyPixel/small-frontend.git"
   },
   "dependencies": {
     "flux": "^2.0.0",
