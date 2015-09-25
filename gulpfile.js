@@ -32,7 +32,7 @@ var gulp = require('gulp'),
     };
 
 gulp.task('clean', function(cb) {
-  del(['dist'], cb);
+  return del(['dist'], cb);
 });
 
 gulp.task('browserSync', function() {
@@ -94,8 +94,8 @@ gulp.task('modernizr', function() {
 });
 
 gulp.task('bower-libs', function() {
-  var jsFilter = gulpFilter('*.js');
-  var cssFilter = gulpFilter('*.css');
+  var jsFilter = gulpFilter('*.js', {restore: true});
+  var cssFilter = gulpFilter('*.css', {restore: true});
   var fontFilter = gulpFilter(['*.eot', '*.woff', '*.svg', '*.ttf']);
 
   return gulp.src(mainBowerFiles())
@@ -108,7 +108,7 @@ gulp.task('bower-libs', function() {
     suffix: ".min"
   }))
   .pipe(gulp.dest(p.distJs))
-  .pipe(jsFilter.restore())
+  .pipe(jsFilter.restore)
 
   // css from bower_components, minified
   .pipe(cssFilter)
@@ -118,7 +118,7 @@ gulp.task('bower-libs', function() {
     suffix: ".min"
   }))
   .pipe(gulp.dest(p.distCss))
-  .pipe(cssFilter.restore())
+  .pipe(cssFilter.restore)
 
   // font files from bower_components
   .pipe(fontFilter)
