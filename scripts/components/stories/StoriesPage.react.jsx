@@ -5,7 +5,7 @@ var ErrorNotice = require('../../components/common/ErrorNotice.react.jsx');
 var StoryActionCreators = require('../../actions/StoryActionCreators.react.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
-var timeago = require('timeago');
+var moment = require('moment');
 
 var StoriesPage = React.createClass({
 
@@ -56,7 +56,7 @@ var StoryItem = React.createClass({
         </div>
         <div className="story__body">{this.props.story['abstract']}...</div>
         <span className="story__user">{this.props.story.user.username}</span>
-        <span className="story__date"> - {timeago(this.props.story.created_at)}</span>
+        <span className="story__date"> - {moment(this.props.story.created_at).fromNow()}</span>
       </li>
       );
   }

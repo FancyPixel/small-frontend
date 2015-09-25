@@ -9,10 +9,10 @@
   "dependencies": {
     "flux": "^2.0.0",
     "keymirror": "~0.1.0",
+    "moment": "^2.10.6",
     "object-assign": "^4.0.1",
     "react": "^0.13.0",
-    "superagent": "^1.4.0",
-    "timeago": "^1.4.3"
+    "superagent": "^1.4.0"
   },
   "devDependencies": {
     "browser-sync": "~2.9.6",
