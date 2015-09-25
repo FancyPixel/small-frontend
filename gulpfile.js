@@ -81,7 +81,9 @@ gulp.task('styles', function() {
     .pipe(changed(p.distCss))
     .pipe(sass({errLogToConsole: true}))
     .on('error', notify.onError())
-    .pipe(autoprefixer('last 1 version'))
+    .pipe(autoprefixer({
+      browsers: ['last 1 version']
+    }))
     .pipe(csso())
     .pipe(gulp.dest(p.distCss))
     .pipe(reload({stream: true}));
