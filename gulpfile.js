@@ -89,10 +89,18 @@ gulp.task('styles', function() {
     .pipe(reload({stream: true}));
 });
 
-// Ugly hack to bring modernizr in
+// Ugly hack to bring resources in
 gulp.task('modernizr', function() {
   return gulp.src('bower_components/modernizr/modernizr.js')
   .pipe(gulp.dest(p.distJs));
+});
+gulp.task('foundation-js', function() {
+   return gulp.src('bower_components/foundation/js/foundation.min.js')
+   .pipe(gulp.dest(p.distJs));
+});
+gulp.task('foundation-css', function() {
+  return gulp.src('bower_components/foundation/css/foundation.min.css')
+  .pipe(gulp.dest(p.distCss));
 });
 
 gulp.task('bower-libs', function() {
@@ -129,7 +137,7 @@ gulp.task('bower-libs', function() {
 });
 
 gulp.task('libs', function() {
-  gulp.start(['modernizr', 'bower-libs', 'fonts']);
+  gulp.start(['modernizr', 'foundation-css', 'foundation-js', 'bower-libs', 'fonts']);
 });
 
 gulp.task('watchTask', function() {
