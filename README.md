@@ -1,14 +1,14 @@
-#Small
+# Small
 This is a sample project used to illustrate the Flux architecture with React. Checkout the full article [here](http://fancypixel.github.io/blog/2015/01/28/react-plus-flux-backed-by-rails-api/)
 
-##Setup
+## Setup
 ```
 npm install
 bower install
 gulp watch
 ```
 
-#MIT License
+# MIT License
 
 	Copyright (c) 2015 Fancy Pixel. All rights reserved.
 
